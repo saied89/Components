@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "Components"
 include(":app")
 include(":components-core")
+include(":components-material")
+include(":components-wireframe")
