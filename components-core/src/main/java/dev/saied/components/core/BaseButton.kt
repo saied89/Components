@@ -6,7 +6,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 
 //@Composable
-//inline fun BaseIconButton(
+//inline fun BaseButton(
 //    noinline onClick: () -> Unit,
 //    modifier: Modifier = Modifier,
 //    enabled: Boolean = true,
