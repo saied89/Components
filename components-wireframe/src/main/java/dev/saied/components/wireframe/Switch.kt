@@ -22,7 +22,7 @@ import dev.saied.components.core.BasicSwitch
 import dev.saied.components.wireframe.theme.ColorTokens
 import kotlinx.coroutines.FlowPreview
 
-// TODO: Provide thump content
+// TODO: Add thump content
 @Composable
 fun Switch(
     checked: Boolean,
@@ -57,7 +57,7 @@ fun Switch(
     )
 }
 
-object SwitchDefaults {
+private object SwitchDefaults {
     @Stable
     fun trackColor(checked: Boolean, enabled: Boolean) =
         if (!checked && !enabled) ColorTokens.grey300
@@ -73,40 +73,4 @@ object SwitchDefaults {
             else ColorTokens.grey400
         }
 
-}
-
-@Composable
-@Preview
-private fun SwitchPreview() {
-    Column {
-        val (checked, onCheckedChange) = remember { mutableStateOf(true) }
-        Switch(
-            checked = checked,
-            onCheckedChanged = onCheckedChange,
-            modifier = Modifier.padding(vertical = 6.dp)
-        )
-
-        Switch(
-            checked = true,
-            onCheckedChanged = null,
-            modifier = Modifier.padding(vertical = 6.dp)
-        )
-        Switch(
-            checked = false,
-            onCheckedChanged = null,
-            modifier = Modifier.padding(vertical = 6.dp)
-        )
-        Switch(
-            checked = true,
-            onCheckedChanged = null,
-            enabled = false,
-            modifier = Modifier.padding(vertical = 6.dp)
-        )
-        Switch(
-            checked = false,
-            onCheckedChanged = null,
-            enabled = false,
-            modifier = Modifier.padding(vertical = 6.dp)
-        )
-    }
 }
