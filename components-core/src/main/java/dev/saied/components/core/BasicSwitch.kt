@@ -81,8 +81,7 @@ fun BasicSwitch(
 }
 
 object BasicSwitchDefaults {
-    val animationSpec: FiniteAnimationSpec<Float> =
-        spring<Float>(dampingRatio = 0.9f, stiffness = 1400.0f)
+    val animationSpec: FiniteAnimationSpec<Float> = DefaultAnimationSpecs.fastSpatialSpec()
 }
 
 @Preview
