@@ -12,11 +12,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import dev.saied.components.core.BasicTabsRow
 import dev.saied.components.core.LocalContentColor
+import dev.saied.components.core.LocalTextStyle
 import dev.saied.components.core.TabIndicatorScope
 import dev.saied.components.core.Text
 import dev.saied.components.wireframe.theme.ColorTokens
@@ -40,6 +44,7 @@ fun TabRow(
         tabs = {
             CompositionLocalProvider(
                 LocalContentColor provides ColorTokens.grey900,
+                LocalTextStyle provides TextStyle(fontWeight = FontWeight.Medium),
                 content = tabs
             )
         }
