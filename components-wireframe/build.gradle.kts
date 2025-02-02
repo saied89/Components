@@ -44,9 +44,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     implementation(libs.androidx.ui)
     implementation(libs.androidx.foundation)
-    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     screenshotTestImplementation(libs.androidx.ui.tooling)
+    screenshotTestImplementation(libs.androidx.material.icons)
 }

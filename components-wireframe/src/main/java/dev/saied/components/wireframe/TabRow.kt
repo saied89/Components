@@ -80,18 +80,3 @@ object TabRowDefaults {
         )
     }
 }
-
-@Preview
-@Composable
-private fun TabRowPreview() {
-    var state by remember { mutableStateOf(0) }
-    val titles = listOf("TAB 1", "TAB 2", "TAB 3")
-    TabRow(state) {
-        titles.forEachIndexed { index, title ->
-            Tab(
-                content = { Text(title) },
-                selected = state == index,
-                onClick = { state = index })
-        }
-    }
-}
